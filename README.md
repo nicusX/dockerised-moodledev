@@ -50,7 +50,7 @@ Two approaches are available:
 The IP of the Docker-machine VM is hardwired in `docker-compose.yml`.
 If the VM uses an IP different from `192.169.99.100`, the file must be changed accordingly.
 
-*TODO Make VM machine parametric*
+*TODO Make VM IP parametric*
 
 #### Build and start services
 ```
@@ -94,3 +94,4 @@ The scripts automatically detect the IP used by the Docker-machine VM.
 ```
 ./install-moodle.sh
 ```
+*TODO Externalise all parameters in a single file*
