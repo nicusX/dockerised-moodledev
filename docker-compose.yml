@@ -1,0 +1,21 @@
+moodle:
+  build: .
+  container_name: moodle
+  ports:
+    - "8080:80"
+  links:
+    - moodledb:db
+  volumes:
+    - ./moodle:/var/www/html
+  environment:
+    - MOODLE_URL=http://192.168.99.100:8080      
+    
+moodledb:
+  image: postgres
+  container_name: moodledb
+  ports:
+    - "32768:5432"
+  environment:
+    - POSTGRES_USER=moodle
+    - POSTGRES_PASSWORD=secret
+     
